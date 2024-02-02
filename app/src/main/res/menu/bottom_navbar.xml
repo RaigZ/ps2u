@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_service_messages"
+        android:title="Service Messages"
+        android:icon="@drawable/ic_service_messages" >
+    </item>
+    <item
+        android:id="@+id/ic_search_item"
+        android:title="Search Item"
+        android:icon="@drawable/ic_search_item" >
+    </item>
+    <item
+        android:id="@+id/ic_search_character"
+        android:title="Search Character"
+        android:icon="@drawable/ic_search_character" >
+    </item>
+</menu>

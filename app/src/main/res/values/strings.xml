@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ps2u</string>
+    <string name="search_character_hint">Search Character (Name/ID)</string>
+    <string name="search_item_hint">Search Item (Name/ID)</string>
+    <string name="title_activity_character_info">CharacterInfoActivity</string>
+
 </resources>

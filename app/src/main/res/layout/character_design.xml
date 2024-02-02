@@ -21,9 +21,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/char_id"
+                android:id="@+id/char_name"
+                android:textSize="20sp"
+                android:fontFamily="@font/planetside2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <View

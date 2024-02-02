@@ -11,4 +11,12 @@ interface PS2APIInterface {
         @Query("name.first") query: String,
         @Header("PS2API_SID") key: String = com.example.ps2u.BuildConfig.PS2_API_SID
     ): Call<CharacterListResponse>
+
+    @GET("get/ps2:v2/character_name/")
+    fun SearchCharacterNameByCollection (
+        @Query("name.first") query: String,
+        @Query("c:limit") limit: Int,
+        @Header("PS2API_SID") key: String = com.example.ps2u.BuildConfig.PS2_API_SID
+    ): Call<CharacterNameListResponse>
+
 }

@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ps2u.API.CharacterListResponse
-import com.example.ps2u.API.Character
-import com.example.ps2u.MainActivity
+import com.example.ps2u.API.CharacterNameCollection
+import com.example.ps2u.API.CharacterNameListResponse
+import com.example.ps2u.CharacterInfoActivity
 import com.example.ps2u.R
 
-class RVAdapter(private var dataList: List<Character>) : RecyclerView.Adapter<RVAdapter.ViewHolder>() {
+class RVAdapter(private var dataList: List<CharacterNameCollection>) : RecyclerView.Adapter<RVAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.character_design, parent, false)
@@ -23,12 +23,12 @@ class RVAdapter(private var dataList: List<Character>) : RecyclerView.Adapter<RV
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = dataList[position]
-        holder.char_id.text = "Character ID: ${item.character_id.toString()}"
+        holder.char_name.text = item.name.first
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(newSearchItems: CharacterListResponse) {
-        dataList = newSearchItems.character_list
+    fun setData(newSearchItems: CharacterNameListResponse) {
+        dataList = newSearchItems.character_name_list
         notifyDataSetChanged()
     }
 
@@ -37,15 +37,15 @@ class RVAdapter(private var dataList: List<Character>) : RecyclerView.Adapter<RV
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val char_id: TextView = itemView.findViewById(R.id.char_id)
+        val char_name: TextView = itemView.findViewById(R.id.char_name)
 
         init {
             itemView.setOnClickListener {
                 val item = dataList[adapterPosition]
-                Log.d("In RVAdapter", item.character_id)
+                Log.d("In RVAdapter", item.name.first)
 
-                val intent = Intent(itemView.context, MainActivity::class.java)
-                intent.putExtra("char_id", item.character_id)
+                val intent = Intent(itemView.context, CharacterInfoActivity::class.java)
+                intent.putExtra("character_name", item.name.first)
 
                 itemView.context.startActivity(intent)
             }
