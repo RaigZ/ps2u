@@ -3,12 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ServiceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+        android:id="@+id/svWSContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ServiceFragment" />
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/tvWSMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
 </FrameLayout>

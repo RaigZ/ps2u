@@ -8,6 +8,7 @@ import com.example.ps2u.API.PS2APIService
 import com.example.ps2u.RecyclerView.RVAdapter
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.ps2u.API.Character
@@ -57,6 +58,9 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
+
+
+
 
 /* TEST PURPOSES */
 
