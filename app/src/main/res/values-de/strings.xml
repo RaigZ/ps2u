@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_character_hint">Suchzeichen (Name/ID)</string>
+    <string name="search_item_hint">Suchelement (Name/ID)</string>
+</resources>

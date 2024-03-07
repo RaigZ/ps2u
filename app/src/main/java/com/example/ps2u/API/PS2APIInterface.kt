@@ -19,4 +19,16 @@ interface PS2APIInterface {
         @Header("PS2API_SID") key: String = com.example.ps2u.BuildConfig.PS2_API_SID
     ): Call<CharacterNameListResponse>
 
+
+    @GET("get/ps2/item?")
+    fun SearchItemByName (
+        @Query("name.de") DE: String?,
+        @Query("name.en") EN: String?,
+        @Query("name.es") ES: String?,
+        @Query("name.fr") FR: String?,
+        @Query("name.it") IT: String?,
+        @Query("name.tr") TR: String?,
+        @Query("c:lang") lang: String,
+        @Header("PS2API_SID") key: String = com.example.ps2u.BuildConfig.PS2_API_SID
+    ): Call<ItemListResponse>
 }

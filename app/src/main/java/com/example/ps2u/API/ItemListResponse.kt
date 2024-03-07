@@ -4,7 +4,6 @@ data class ItemListResponse (
     val item_list: List<Item>,
     val returned: Int
 )
-
 data class Item (
     val item_id: String,
     val item_type_id: String,

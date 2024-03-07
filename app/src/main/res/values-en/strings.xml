@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_character_hint">Search Character (Name/ID)</string>
+    <string name="search_item_hint">Search Item (Name/ID)</string>
+</resources>

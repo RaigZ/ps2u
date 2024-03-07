@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ps2u.API.CharacterListResponse
 import com.example.ps2u.API.PS2APIService
+import com.example.ps2u.Util.convertListToString
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,10 +32,6 @@ class CharacterInfoActivity : AppCompatActivity() {
             Toast.makeText(this, "Unable to load character information.", Toast.LENGTH_LONG).show()
             finish()
         } else SearchCharacterInfo(name, characterInfoList, this)
-    }
-
-    inline fun <reified T: Any> convertListToString(list: List<T?>): List<String> {
-        return list.map { it.toString() }
     }
 
     private fun SearchCharacterInfo(name: String, listView: ListView, context: Context) {
@@ -102,15 +99,15 @@ class CharacterInfoActivity : AppCompatActivity() {
         @SuppressLint("ViewHolder")
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val layoutInflater = LayoutInflater.from(characterContext)
-            val itemRow = layoutInflater.inflate(R.layout.character_row, parent, false)
+            val characterRow = layoutInflater.inflate(R.layout.character_row, parent, false)
 
-            val tvCharacterLabel = itemRow.findViewById<TextView>(R.id.tvCharacterLabel)
-            val tvCharacterInfo = itemRow.findViewById<TextView>(R.id.tvCharacterInfo)
+            val tvCharacterLabel = characterRow.findViewById<TextView>(R.id.tvCharacterLabel)
+            val tvCharacterInfo = characterRow.findViewById<TextView>(R.id.tvCharacterInfo)
 
             tvCharacterLabel.text = characterLabels[position]
             tvCharacterInfo.text = characterList[position]
 
-            return itemRow
+            return characterRow
         }
     }
 }

@@ -65,6 +65,7 @@ class CharacterFragment : Fragment() {
         recyclerView.adapter = characterAdapter
 
         searchCharacterFieldLayout.typeface = ResourcesCompat.getFont(requireContext(), R.font.planetside2)
+        searchCharacterFieldContent.typeface = ResourcesCompat.getFont(requireContext(), R.font.planetside2)
 
         val whitespaceOccurrence = Regex("[/\\s+|^\$/\n]")
 

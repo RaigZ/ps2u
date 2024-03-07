@@ -1,7 +1,15 @@
-<resources>
-    <string name="app_name">ps2u</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">ps2u</string>
     <string name="search_character_hint">Search Character (Name/ID)</string>
     <string name="search_item_hint">Search Item (Name/ID)</string>
-    <string name="title_activity_character_info">CharacterInfoActivity</string>
+    <string name="title_activity_character_info" translatable="false">CharacterInfoActivity</string>
+
+<!-- Language spinner opt translations -->
+    <string name="search_item_hint_opt_en" tools:ignore="MissingTranslation">Search Item (Name/ID)</string>
+    <string name="search_item_hint_opt_de" tools:ignore="MissingTranslation">Suchelement (Name/ID)</string>
+    <string name="search_item_hint_opt_es" tools:ignore="MissingTranslation">Elemento de búsqueda (Nombre/ID)</string>
+    <string name="search_item_hint_opt_fr" tools:ignore="MissingTranslation">Rechercher des éléments (nom/ID)</string>
+    <string name="search_item_hint_opt_it" tools:ignore="MissingTranslation">Elemento di ricerca (nome/ID)</string>
+    <string name="search_item_hint_opt_tr" tools:ignore="MissingTranslation">Arama Öğesi (Ad/Kimlik)</string>
 
 </resources>

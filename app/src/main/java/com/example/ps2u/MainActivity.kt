@@ -13,6 +13,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.ps2u.API.Character
 import com.example.ps2u.API.CharacterListResponse
+import com.example.ps2u.API.CharacterNameListResponse
+import com.example.ps2u.API.ItemListResponse
 import com.example.ps2u.Fragments.CharacterFragment
 import com.example.ps2u.Fragments.ItemFragment
 import com.example.ps2u.Fragments.ServiceFragment

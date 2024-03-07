@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ItemFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/characterRecyclerView"
-        android:layout_width="413dp"
-        android:layout_height="431dp"
-        android:layout_marginTop="80dp"
-        app:layoutManager="LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.67"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchItemLayout"
-        app:layout_constraintVertical_bias="0.0"
-        tools:itemCount="8" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchItemLayout"
-        android:layout_width="330dp"
+        android:layout_width="250dp"
         android:layout_height="55dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginStart="90dp"
         android:hint="@string/search_item_hint"
         android:textColorHint="@color/material_on_background_emphasis_medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +25,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Spinner
+        android:id="@+id/itemLangSpinner"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:hint=""
+        android:textSize="15sp"
+        android:layout_marginTop="5dp" />
+
+<!--    <ListView-->
+<!--        android:id="@+id/itemListView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="80dp" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        tools:itemCount="13"/>
 </FrameLayout>

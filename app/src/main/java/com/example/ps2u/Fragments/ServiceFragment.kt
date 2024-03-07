@@ -21,7 +21,8 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.WebSocket
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import com.example.ps2u.Util.fromJson
+import com.example.ps2u.Util.iterateListFormat
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -227,18 +228,3 @@ class ServiceFragment : Fragment(), WebSocketListenerCallback {
         }
     }
 }
-
-inline fun <reified T> Gson.fromJson(json: Map<*, *>): T {
-    val jsonString = this.toJson(json)
-    return this.fromJson(jsonString, object: TypeToken<T>() {}.type)
-}
-
-fun iterateListFormat(list: List<String>, stringBuilder: StringBuilder) {
-    list.forEachIndexed { index, it ->
-        if ((index < list.size - 1))
-            stringBuilder.append("$it, ")
-        else if(index >= list.size - 1)
-            stringBuilder.append(it + '\n')
-    }
-}
-
