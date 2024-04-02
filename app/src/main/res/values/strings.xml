@@ -3,6 +3,7 @@
     <string name="search_character_hint">Search Character (Name/ID)</string>
     <string name="search_item_hint">Search Item (Name/ID)</string>
     <string name="title_activity_character_info" translatable="false">CharacterInfoActivity</string>
+    <string name="back" translatable="false">Back</string>
 
 <!-- Language spinner opt translations -->
     <string name="search_item_hint_opt_en" tools:ignore="MissingTranslation">Search Item (Name/ID)</string>

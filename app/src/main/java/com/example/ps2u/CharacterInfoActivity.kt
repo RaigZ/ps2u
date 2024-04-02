@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
@@ -23,14 +24,16 @@ class CharacterInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character)
+        findViewById<Button>(R.id.back).setOnClickListener {
+            finish()
+        }
         val intent = intent
         val name = intent.getStringExtra("character_name")
         val characterInfoList = findViewById<ListView>(R.id.characterInfoList)
 
-        if(name == null) {
+        if(name == null)
             Toast.makeText(this, "Unable to load character information.", Toast.LENGTH_LONG).show()
-            finish()
-        } else SearchCharacterInfo(name, characterInfoList, this)
+        else SearchCharacterInfo(name, characterInfoList, this)
     }
 
     private fun SearchCharacterInfo(name: String, listView: ListView, context: Context) {
